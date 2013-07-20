@@ -23,7 +23,7 @@ public class ModularProxy implements Runnable {
 
 	public void start() {
 		try {
-			ss = new ServerSocket(0, 16, InetAddress.getLoopbackAddress());
+			ss = new ServerSocket(0, 16, mineshafter.Future.getLoopbackAddress());
 			System.out.println("p: "+ss.getLocalSocketAddress().toString());
 		} catch (IOException e) {
 			e.printStackTrace();

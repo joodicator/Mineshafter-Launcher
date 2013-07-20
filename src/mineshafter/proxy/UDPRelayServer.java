@@ -17,7 +17,7 @@ class UDPRelayServer {
 	static int idleTimeout = 30 * 1000;
 
 	public UDPRelayServer(InetAddress clientIP, int clientPort) throws IOException {
-		client_sock = new DatagramSocket(0, InetAddress.getLoopbackAddress());
+		client_sock = new DatagramSocket(0, mineshafter.Future.getLoopbackAddress());
 
 		// client_sock = new Socks5DatagramSocket(clientIP, clientPort); XXX
 		relayPort = client_sock.getLocalPort();

@@ -104,7 +104,7 @@ public class SocksProxyConnection implements ProxyConnection {
 	}
 
 	private void onBind(SocksMessage msg) throws IOException {
-		ServerSocket bound = new ServerSocket(0, 5, InetAddress.getLoopbackAddress());
+		ServerSocket bound = new ServerSocket(0, 5, mineshafter.Future.getLoopbackAddress());
 		bound.setSoTimeout(TIMEOUT);
 
 		SocksMessage response;
